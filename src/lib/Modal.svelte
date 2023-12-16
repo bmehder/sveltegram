@@ -6,13 +6,13 @@
 </script>
 
 <dialog bind:this={modal} on:close>
-	<button on:click={() => modal.close()}>
+	<button on:click={() => modal.close()}>X</button>
 		<slot />
-	</button>
 </dialog>
 
 <style>
 	dialog {
+		position: relative;
 		padding: 0;
 		line-height: 0;
 		border: none;
@@ -20,11 +20,26 @@
 	}
 	
 	dialog::backdrop {
-		background-color: hsl(0 0% 0% / 80%);
+		background-color: hsl(0 0% 0% / 60%);
 	}
 	
 	button {
-		all: unset;
-		cursor: pointer;
+		position: absolute;
+		top: 0.25rem;
+		right: 0.25rem;
+		width: 3rem;
+		height: 3rem;
+		background-color: white;
+		color: #525252;
+		font-size: 1.5rem;
+		font-weight: bold;
+		border: 2px solid rgba(0, 0, 0, 0.6);
+		border-radius: 50%;
+		box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+		transition: 100ms scale;
+
+		&:hover {
+			scale: 0.95;
+		}
 	}
 </style>
