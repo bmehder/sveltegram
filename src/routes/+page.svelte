@@ -12,7 +12,7 @@
 	let modal
 
 	/**
-	 * 
+	 *
 	 * @param {MouseEvent} e
 	 */
 	async function showModal(e) {
@@ -32,8 +32,24 @@
 		}
 	}
 
+	function disableScrolling() {
+		var x = window.scrollX
+		var y = window.scrollY
+		window.onscroll = function () {
+			window.scrollTo(x, y)
+		}
+	}
+
+	function enableScrolling() {
+		window.onscroll = function () {}
+	}
+
 	function closeModal() {
+		disableScrolling()
 		history.back()
+		setTimeout(() => {
+			enableScrolling()
+		}, 300)
 	}
 </script>
 
