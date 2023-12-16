@@ -22,7 +22,7 @@ img {
 }
 
 .center {
-	max-height: 90%;
+	max-height: 95%;
 	display: grid;
 	place-content: center;
 	place-items: center;

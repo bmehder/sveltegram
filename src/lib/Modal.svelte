@@ -13,7 +13,7 @@
 
 <style>
 	dialog {
-		max-height: 90%;
+		max-height: 95%;
 		border: none;
 		border-radius: 8px;
 	}
