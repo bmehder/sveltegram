@@ -13,15 +13,18 @@
 
 <style>
 	dialog {
-		max-height: 95%;
+		padding: 0;
+		line-height: 0;
 		border: none;
-		border-radius: 8px;
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 	}
-
+	
 	dialog::backdrop {
 		background-color: hsl(0 0% 0% / 40%);
 	}
+	
 	button {
 		all: unset;
+		cursor: pointer;
 	}
 </style>

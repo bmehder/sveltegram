@@ -6,24 +6,15 @@
 
 	export let data
 
-	/**
-	 * @type {HTMLDialogElement}
-	 */
+	/** @type {HTMLDialogElement} */
 	let modal
 
-	/**
-	 *
-	 * @param {MouseEvent} e
-	 */
-	async function showModal(e) {
-		// get URL
-		const { href } = /** @type {HTMLAnchorElement} */ (e.currentTarget)
+	/** @param {MouseEvent} evt */
+	async function showModal(evt) {
+		const { href } = /** @type {HTMLAnchorElement} */ (evt.currentTarget)
 
-		// get result of `load` function
 		const result = await preloadData(href)
-		console.log(result)
 
-		// create new history entry
 		if (result.type === 'loaded' && result.status === 200) {
 			pushState(href, { selected: result.data })
 			modal.showModal()
@@ -69,7 +60,7 @@
 
 <style>
 	.feed {
-		max-inline-size: 600px;
+		max-inline-size: 38rem;
 		display: grid;
 		gap: 2rem;
 		margin-inline: auto;
