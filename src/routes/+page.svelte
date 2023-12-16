@@ -50,20 +50,10 @@
 	{/if}
 </Modal>
 
-<div class="feed">
+<div class="auto-grid">
 	{#each data.thumbnails as thumbnail}
 		<a on:click|preventDefault={showModal} href="/photos/{thumbnail.id}">
 			<img alt={thumbnail.alt} src={thumbnail.src} />
 		</a>
 	{/each}
 </div>
-
-<style>
-	.feed {
-		max-inline-size: 38rem;
-		display: grid;
-		gap: 2rem;
-		margin-inline: auto;
-		padding-block: 2rem;
-	}
-</style>

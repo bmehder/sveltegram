@@ -20,7 +20,7 @@
 	}
 	
 	dialog::backdrop {
-		background-color: hsl(0 0% 0% / 40%);
+		background-color: hsl(0 0% 0% / 80%);
 	}
 	
 	button {

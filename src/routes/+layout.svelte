@@ -6,4 +6,14 @@
 	<title>Sveltegram</title>
 </svelte:head>
 
-<slot />
+<div class="wrapper">
+	<slot />
+</div>
+
+<style>
+	.wrapper {
+		max-width: 48rem;
+		padding: 2rem;
+		margin-inline: auto;
+	}
+</style>

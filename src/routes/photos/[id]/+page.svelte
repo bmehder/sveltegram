@@ -7,3 +7,9 @@
 		<img alt={data.image.alt} src={data.image.src} />
 	{/if}
 </div>
+
+<style>
+	img {
+		border-radius: 0.5rem;
+	}
+</style>
