@@ -12,7 +12,7 @@
 
 <style>
 	dialog {
-		position: relative;
+		/* position: relative; */
 		padding: 0;
 		line-height: 0;
 		border: none;

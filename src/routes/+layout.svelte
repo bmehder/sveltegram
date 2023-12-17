@@ -32,6 +32,10 @@
 			padding-inline: 2rem;
 			background-color: #323232;
 			text-align: center;
+			
+			& h1 {
+				font-weight: 500;
+			}
 		}
 	}
 </style>
