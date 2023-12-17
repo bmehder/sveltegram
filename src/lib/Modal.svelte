@@ -7,7 +7,7 @@
 
 <dialog bind:this={modal} on:close>
 	<button on:click={() => modal.close()}>X</button>
-		<slot />
+	<slot />
 </dialog>
 
 <style>
@@ -18,11 +18,11 @@
 		border: none;
 		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 	}
-	
+
 	dialog::backdrop {
 		background-color: hsl(0 0% 0% / 60%);
 	}
-	
+
 	button {
 		position: absolute;
 		top: 0.25rem;

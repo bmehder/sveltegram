@@ -17,7 +17,7 @@
 
 		if (result.type === 'loaded' && result.status === 200) {
 			pushState(href, { selected: result.data })
-			modal.showModal()
+			modal?.showModal()
 		} else {
 			goto(href)
 		}
@@ -51,9 +51,9 @@
 </Modal>
 
 <div class="auto-grid">
-	{#each data.thumbnails as thumbnail}
-		<a on:click|preventDefault={showModal} href="/photos/{thumbnail.id}">
-			<img alt={thumbnail.alt} src={thumbnail.src} />
+	{#each data.thumbnails as { id, src, alt }}
+		<a on:click|preventDefault={showModal} href="/photos/{id}">
+			<img {src} {alt} />
 		</a>
 	{/each}
 </div>

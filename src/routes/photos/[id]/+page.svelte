@@ -6,14 +6,15 @@
 	{#if data.image}
 		<img alt={data.image.alt} src={data.image.src} />
 		<div class="text">
-			<div class="heading">Lorem ipsum</div>
-			<div class="sub-heading">Dolor sit amet.</div>
+			<div class="heading">{data.image.heading}</div>
+			<div class="sub-heading">{data.image.subheading}</div>
 		</div>
 	{/if}
 </div>
 
 <style>
 	div.center {
+		padding-block: 1rem;
 		line-height: initial;
 	}
 	img {

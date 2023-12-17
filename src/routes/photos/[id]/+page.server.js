@@ -3,6 +3,8 @@
  * @property {number} id
  * @property {string} alt
  * @property {string} src
+ * @property {string} heading
+ * @property {string} subheading
  */
 
 /** @param {number} x */

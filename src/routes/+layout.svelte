@@ -20,11 +20,17 @@
 	.wrapper {
 		display: grid;
 		gap: 2rem;
-		max-width: 64rem;
-		padding: 2rem;
-		margin-inline: auto;
-
+		
+		& main {
+			max-width: 64rem;
+			margin-inline: auto;
+			padding-inline: 2rem;
+		}
+		
 		& header {
+			padding-block: 1rem;
+			padding-inline: 2rem;
+			background-color: #323232;
 			text-align: center;
 		}
 	}
