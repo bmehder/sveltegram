@@ -1,5 +1,11 @@
 <script>
+	import { onNavigate, replaceState } from '$app/navigation'
+
 	export let data
+	
+	onNavigate(() => {
+		replaceState('/', {selected: undefined})
+	})
 </script>
 
 <div class="center">
@@ -14,7 +20,6 @@
 
 <style>
 	div.center {
-		padding-block: 1rem;
 		line-height: initial;
 	}
 	img {
@@ -31,7 +36,7 @@
 		}
 
 		& .sub-heading {
-			font-size: calc(3rem + 2vw);;
+			font-size: calc(3rem + 2vw);
 			font-weight: 500;
 		}
 	}

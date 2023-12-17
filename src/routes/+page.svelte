@@ -1,8 +1,10 @@
 <script>
 	import { goto, preloadData, pushState } from '$app/navigation'
 	import { page } from '$app/stores'
+	import { disableScrolling, enableScrolling } from '$lib/utils'
 	import Modal from '$lib/Modal.svelte'
 	import Image from './photos/[id]/+page.svelte'
+	import { onMount } from 'svelte'
 
 	export let data
 
@@ -23,24 +25,16 @@
 		}
 	}
 
-	function disableScrolling() {
-		var x = window.scrollX
-		var y = window.scrollY
-		window.onscroll = function () {
-			window.scrollTo(x, y)
-		}
-	}
-
-	function enableScrolling() {
-		window.onscroll = function () {}
-	}
-
 	function closeModal() {
 		disableScrolling()
-		history.back()
+		$page.route.id !== '/' && history.back()
 		setTimeout(() => {
 			enableScrolling()
 		}, 300)
+	}
+
+	$: if (!$page.state.selected) {
+		modal?.close()
 	}
 </script>
 
